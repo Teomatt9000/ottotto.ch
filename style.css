@@ -5,6 +5,35 @@ body {
 }
 
 
+/*animazione testo*/
+
+.char {
+  transform: translateY(110px);
+  transition: tranform 0.1s;
+
+}
+
+a.char {
+  transform: translateY(100px);
+  transition: tranform 0.1s;
+ 
+  text-decoration: none; /* Remove the default underline text decoration */
+  border-bottom: 1px solid black; /* Create the underline as a 1px solid line */
+  line-height: 1.2; /* Adjust the line-height to create some space above the text */
+  margin-bottom: 34px; /* Move the link 2 pixels up, counteracting the line-height */
+
+}
+
+.animated-text {
+  grid-column: 1/6;
+  margin-top: -70px;
+}
+
+.line{
+  grid-column: 1/6;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  line-height: 5rem;  
+}
 /* Cerchio rotante */
 
 text {
@@ -17,9 +46,11 @@ text {
 }
 
 svg{
-  max-width: 10000vmin;
-  min-height: 10px;
+  max-width: 100000vmin;
+  min-height: 450px;
   margin-left: 1000px;
+  margin-top: 0px;
+
 }
 
 @keyframes rotate {
@@ -32,8 +63,6 @@ svg{
   transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
   transform-origin: 250px 250px;
 }
-
-
 
 
 
@@ -51,6 +80,7 @@ svg{
   margin-top: -40px;
   font-family: Helvetica, sans-serif;
   font-size: 5vw;
+  
 }
 
 a {
@@ -95,30 +125,88 @@ h1 {
   animation: move-rtl 6000ms linear infinite;
   padding-inline-start: 20px;
 }
+
 .social-links {
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 120px;
   margin-top: 20px;
   margin-left: 3px;
+  opacity: 0; /* Set initial opacity to 0 */
+  animation: fade-up 2s forwards 2.7s; /* Forward the animation and delay it */
 }
+
+@keyframes fade-up {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-10px) scale(1);
+  }
+  100% {
+    opacity: 1; /* End with opacity 1 */
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* Add a new rule to keep the links visible after the animation is complete */
+.social-links.visible {
+  opacity: 1;
+}
+
+
+
+
+
+
 
 .social-link {
   margin-right: 20px;
+  margin-top: -60px;
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
 }
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
 
 
 
 @media (max-width: 480px) {
+
+
   .social-link {
-    margin-right: 10px;
-    font-size: 13px;
+    margin-right: -25px;
+    margin-top: 10px;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  
+
+
+
+  .animated-text {
+    grid-column: 1/4;
+    margin-top: -60px;
+    line-height: 1rem;  
+    margin-left: -10px;
+    
 
   }
 
-
+  .line{
+    grid-column: 1/6;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: -10rem;  
+  }
 
 
 .grid {
@@ -137,13 +225,13 @@ h1 {
     transition: 0.1s ease;
   }
   p {
-    color: #131313;
-    line-height: 1;
+   color: #131313;
+    line-height: 1.2; /* Set the desired line height value */
     margin-top: 60px;
     font-family: Helvetica, sans-serif;
     font-size: 6vw;
     grid-column: 1/3;
-    line-height: 26px;
+    
   }
 
 .titolone {
@@ -165,7 +253,123 @@ text {
 
 svg{
   min-height: 620px;
-  margin-left: -20px;
+  margin-left: -50px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.textcircle {
+  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+  transform-origin: 250px 250px;
+}
+
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+@media (max-width: 414px) {
+
+
+  .social-link {
+    margin-right: 10px;
+    font-size: 13px;
+    padding-top: -20px;
+
+  }
+
+
+  .char {
+    transform: translateY(110px);
+    transition: tranform 0.1s;
+  
+  }
+  
+  a.char {
+    transform: translateY(100px);
+    transition: tranform 0.1s;
+   
+  text-decoration: none; /* Remove the default underline text decoration */
+  border-bottom: 1px solid black; /* Create the underline as a 1px solid line */
+  line-height: 1.2; /* Adjust the line-height to create some space above the text */
+  margin-bottom: 34px; /* Move the link 2 pixels up, counteracting the line-height */
+
+  }
+  
+  .animated-text {
+    grid-column: 1/4;
+    margin-top: -60px;
+    line-height: -100px;
+    margin-left: 7px;
+    
+
+  }
+
+  .line{
+    grid-column: 1/6;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 2rem;  
+  }
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, minmax(90px, auto));
+  grid-gap: 10px;
+}
+
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    color: #131313;
+    transition: 0.1s ease;
+  }
+  p {
+   color: #131313;
+    line-height: 1.2; /* Set the desired line height value */
+    margin-top: 60px;
+    font-family: Helvetica, sans-serif;
+    font-size: 6vw;
+    grid-column: 1/3;
+    
+  }
+
+.titolone {
+  grid-column: 1/4;
+  margin-left: 20px;
+  margin-top: -40px;
+  font-family: Helvetica, sans-serif;
+  font-size: 5vw;
+}
+
+text {
+  fill: rgb(0, 0, 0);
+  font-family: Helvetica, sans-serif, sans-serif;
+  font-size: 22px;
+  font-weight: 100;
+  animation: rotate 25s linear infinite;
+  transform-origin: 250px 250px;
+}
+
+svg{
+  min-height: 620px;
+  margin-left: -50px;
   padding-bottom: 10px;
   margin-bottom: 0px;
 

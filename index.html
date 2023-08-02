@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>8.8Studio</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="icon" type="icon/png" href="img/icon.png"
+  <link rel="icon" type="icon/png" href="img/icon.png">
 </head>
-
 <body>
-
   <div class="grid"> 
-    <div class="titolone">
+    <div class="animated-text">
       <p>Hey! I’m a graphic designer based
       in Switzerland, you can find 
-      <a href="Portfolio_ENG.pdf" download>here</a> my portfolio, or 
-      <a href="mailto:MatteoBrunoBusiness@gmail.com">here</a> my email.
+      <a class="portfolio-link" href="Portfolio_ENG.pdf" download><span class="underline-link">here</span></a> my portfolio, or 
+      <a class="email-link" href="mailto:MatteoBrunoBusiness@gmail.com"><span class="underline-link">here</span></a>
+      my email.
       <br>Have a nice day! :)</p>
+
       <div class="social-links">
         <a class="social-link" href="https://www.instagram.com/8.8studio/">Instagram</a>
         <a class="social-link" href="https://www.linkedin.com/in/matteo-bruno-1b458a284/">LinkedIn</a>
@@ -24,7 +23,6 @@
       </div>
     </div>
   </div>
-
 
 <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
   <title>@8.8Studio @8.8Studio @8.8Studio</title>
@@ -44,31 +42,23 @@
   </g>
 </svg>
 
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+const myText = new SplitType('.animated-text p')
 
+// ... Your existing JavaScript code ...
+gsap.to('.animated-text .char', {
+    y: 0,
+    stagger: 0.02,
+    delay: 0.3,
+    duration: 0.5,
+    onComplete: function() {
+      document.querySelector('.grid').classList.add('animation-complete');
+    }
+})
+// ... Rest of your JavaScript code ...
 
-
-</body>  
-
-  
-
-
- 
-
-
-
-
-
-
-
-
-
-
+</script>
 </body>
-
-
-
-
-
-
-
 </html>
