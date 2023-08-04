@@ -10,9 +10,11 @@
   <div class="grid"> 
     <div class="animated-text">
       <p>Hey! I’m a graphic designer based
-      in Switzerland, you can find 
-      <a class="portfolio-link" href="Portfolio_ENG.pdf" download><span class="underline-link">here</span></a> my portfolio, or 
-      <a class="email-link" href="mailto:MatteoBrunoBusiness@gmail.com"><span class="underline-link">here</span></a>
+      in Ticino🇨🇭, you can find 
+      <a class="portfolio-link underline-link" href="Portfolio_ENG.pdf" download><span>here</span></a> my portfolio, or 
+      my portfolio, or    
+       <a class="email-link underline-link" href="mailto:MatteoBrunoBusiness@gmail.com"><span>here</span></a>
+
       my email.
       <br>Have a nice day! :)</p>
 
@@ -42,23 +44,63 @@
   </g>
 </svg>
 
+<!-- ... (previous code) ... -->
 <script src="https://unpkg.com/split-type"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-const myText = new SplitType('.animated-text p')
+document.addEventListener('DOMContentLoaded', function () {
+  const myText = new SplitType('.animated-text p');
 
-// ... Your existing JavaScript code ...
-gsap.to('.animated-text .char', {
+  gsap.to('.animated-text .char', {
     y: 0,
     stagger: 0.02,
     delay: 0.3,
     duration: 0.5,
-    onComplete: function() {
+    onComplete: function () {
       document.querySelector('.grid').classList.add('animation-complete');
+      // When the GSAP animation completes, add the class to show the underline for the "here" links
+      document.querySelectorAll('.underline-link').forEach(link => link.classList.add('show-underline'));
     }
-})
-// ... Rest of your JavaScript code ...
+  });
+});
 
 </script>
+
+<div id="text-container">
+  <p id="color-change-text" draggable="true">Drag and Click this text to change color</p>
+  <input type="color" id="color-picker">
+</div>
+<script src="script.js">
+
+const colorChangeText = document.getElementById('color-change-text');
+const colorPicker = document.getElementById('color-picker');
+
+// Function to handle the color change effect
+function changeTextColor(color) {
+  colorChangeText.style.color = color;
+}
+
+// Add event listeners for drag and click interactions
+colorChangeText.addEventListener('dragstart', (e) => {
+  // Start dragging the text
+  e.dataTransfer.setData('text/plain', colorChangeText.textContent);
+});
+
+colorChangeText.addEventListener('click', () => {
+  // Show the color picker on click
+  colorPicker.click();
+});
+
+// Add an event listener to update the text color when a color is picked
+colorPicker.addEventListener('input', (e) => {
+  const selectedColor = e.target.value;
+  changeTextColor(selectedColor);
+});
+</script>
+
+
+
+
 </body>
 </html>
+
