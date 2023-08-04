@@ -182,27 +182,6 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
-/* Other CSS rules remain unchanged */
-/* ... (previous CSS code) ... */
-
-
-#text-container {
-  position: relative;
-  user-select: none; /* Prevent text selection when dragging */
-}
-
-#color-change-text {
-  cursor: pointer; /* Change the cursor to a pointer when hovering over the text */
-  user-drag: element; /* Enable dragging for the element */
-}
-
-#color-picker {
-  position: absolute;
-  top: 0;
-  left: 150px; /* Adjust the position of the color picker as desired */
-  visibility: hidden; /* Hide the color picker by default */
-}
-
 
 
 .social-link {
