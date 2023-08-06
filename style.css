@@ -21,13 +21,12 @@ a.char {
   border-bottom: 1px solid black; /* Create the underline as a 1px solid line */
   line-height: 1.2; /* Adjust the line-height to create some space above the text */
   margin-bottom: 34px; /* Move the link 2 pixels up, counteracting the line-height */
-  
+
 }
 
 .animated-text {
   grid-column: 1/6;
-  margin-top: 20px;
-  
+  margin-top: -70px;
 }
 
 .line{
@@ -35,9 +34,6 @@ a.char {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   line-height: 5rem;  
 }
-
-
-
 /* Cerchio rotante */
 
 text {
@@ -80,13 +76,35 @@ svg{
   grid-gap: 10px;
 }
 
+.titolone {
+  grid-column: 1/6;
+  margin-left: 20px;
+  margin-top: -40px;
+  font-family: Helvetica, sans-serif;
+  font-size: 5vw;
+  
+}
 
-
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  color: #131313;
+  transition: 0.1s ease;
+}
 
 a:hover {
   color: #24FF00;
 }
 
+p {
+  color: #131313;
+  line-height: 1;
+  margin-top: 60px;
+  font-family: Helvetica, sans-serif;
+  font-size: 5vw;
+  grid-column: 1/7;
+}
 
 .instalink {
   text-decoration: none;
@@ -94,8 +112,31 @@ a:hover {
   font-size: 10px;
 }
 
+.container {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  margin-top: 300px;
+  white-space: nowrap;
+}
 
+h1 {
+  font-size: 25px;
+  font-family: Helvetica;
+  font-weight: 200;
+  animation: move-rtl 6000ms linear infinite;
+  padding-inline-start: 20px;
+}
 
+.social-links {
+  display: flex;
+  align-items: center;
+  font-size: 120px;
+  margin-top: 20px;
+  margin-left: 3px;
+  opacity: 0; /* Set initial opacity to 0 */
+  animation: fade-up 2s forwards 2.7s; /* Forward the animation and delay it */
+}
 
 @keyframes fade-up {
   0% {
@@ -108,6 +149,7 @@ a:hover {
   }
 }
 
+/* Add a new rule to keep the links visible after the animation is complete */
 .social-links.visible {
   opacity: 1;
 }
@@ -115,6 +157,7 @@ a:hover {
 
 
 
+/* Initially hide the underline for the "here" links */
 .underline-link span {
   border-bottom: none;
   position: relative;
