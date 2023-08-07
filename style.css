@@ -26,7 +26,8 @@ a.char {
 
 .animated-text {
   grid-column: 1/6;
-  margin-top: -70px;
+  margin-top: -45px;
+  margin-left: 20px;
 }
 
 .line{
@@ -225,6 +226,7 @@ h1 {
     line-height: 1rem;  
     margin-left: -10px;
     font-style: bold;
+    
 
   }
 
