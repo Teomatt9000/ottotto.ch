@@ -10,7 +10,6 @@ body {
 .char {
   transform: translateY(110px);
   transition: tranform 0.1s;
-
 }
 
 a.char {
@@ -41,31 +40,12 @@ text {
   fill: rgb(0, 0, 0);
   font-family: Helvetica, sans-serif, sans-serif;
   font-size: 22px;
-  font-weight: 100;
+  font-weight: 500;
   animation: rotate 25s linear infinite;
   transform-origin: 250px 250px;
 }
 
-svg{
-  max-width: 100000vmin;
-  min-height: 450px;
-  margin-left: 1000px;
-  margin-top: 30px;
 
-}
-
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.textcircle {
-  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
-  transform-origin: 250px 250px;
-  opacity: 0; /* Set initial opacity to 0 */
-  animation: fade-up 2s forwards 3.3s; /* Forward the animation and delay it */
-}
 
 
 
@@ -95,7 +75,7 @@ a {
 }
 
 a:hover {
-  color: #24FF00;
+  color: #ff0000;
 }
 
 p {
@@ -323,6 +303,7 @@ svg{
   .char {
     transform: translateY(110px);
     transition: tranform 0.1s;
+    
   
   }
   
@@ -342,6 +323,7 @@ svg{
     margin-top: -60px;
     line-height: -100px;
     margin-left: 7px;
+    
     
 
   }
