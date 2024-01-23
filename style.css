@@ -32,7 +32,7 @@ a.char {
 .line{
   grid-column: 1/6;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  line-height: 6rem;  
+  line-height: 5.9rem;  
 }
 /* Cerchio rotante */
 
@@ -67,7 +67,7 @@ text {
 
 a {
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 3px;
   text-underline-offset: 4px;
   color: #131313;
   transition: 0.1s ease;
