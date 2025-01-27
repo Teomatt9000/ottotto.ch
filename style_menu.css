@@ -23,7 +23,7 @@ header {
 .griglia {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 50px;
   margin: 0px; /* Set margin explicitly to 20px */
 }
 
@@ -85,8 +85,8 @@ header {
     font-size: 20px;
     font-weight: 600;
     margin: 0px;
-    padding-top: 100px;
-    margin-top: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
     color: rgb(224, 224, 224);
     
 }
@@ -133,7 +133,7 @@ header {
   
   
   h3{
-    padding: 0px;
+    padding-top: 25px;
     margin: 0px;
     grid-column: 1 / span 1; /* Starts at column 1 and spans 2 columns */
     font-family: "neue-haas-grotesk-display", sans-serif;
