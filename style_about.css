@@ -1,0 +1,339 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(22, 22, 22);
+}
+
+header {
+  color: rgb(224, 224, 224);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: fixed;
+  top: 0px; /* Adjusted to provide space from top */
+  left: 0px; /* Adjusted to provide space from left */
+  right: 0px; /* Adjusted to provide space from right */
+  z-index: 2129102910;
+  margin: 0; /* Resetting margin */
+}
+
+.griglia {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0px; /* Set margin explicitly to 20px */
+}
+
+
+  .mail{
+    grid-row: 2;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 20px;
+    padding-left: 0px;
+    color: rgb(224, 224, 224);  list-style: none; /* Remove default list styling */
+    margin: 0px;
+    font-weight: 600;
+    grid-column: 1;  
+  }
+  .mail a:hover {
+    color: #4f4f4f;
+  }
+  
+  
+  .portfolio {
+    grid-row: 2;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 20px;
+    padding-left: 0px;
+    color: rgb(224, 224, 224);  list-style: none; /* Remove default list styling */
+    margin: 0px;
+    font-weight: 600;
+    grid-column: 2;  
+
+  }
+  .portfolio a:hover {
+    color: #4f4f4f;
+  }
+  
+  
+  
+
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    justify-self: end; /* Align the social list to the right side */
+
+    grid-column: 4 / 4;
+
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: rgb(224, 224, 224);
+}
+  
+  .nav-link:hover {
+    color: #4f4f4f;
+  }
+  
+  p.storia {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px;
+    padding-top: 100px;
+    margin-top: 20px;
+    color: rgb(224, 224, 224);
+    
+}
+  
+
+  
+  /*footer */
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    padding: 20px;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    color: rgb(224, 224, 224);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 80px;
+
+}
+  
+  h2{
+  margin: 0px;
+  grid-row: 1;
+  
+  }
+  
+  .p3 {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 0.9;
+    color: rgb(224, 224, 224);  margin: 0px;
+    margin-top: -15px;
+    grid-column: 1 / span 3; /* Starts at column 1 and spans 2 columns */
+    text-decoration: none; /* Remove default underline for links */
+  }
+  
+  .p3:hover {
+    color: lightgray; /* Change text color on hover */
+  }
+  
+  
+  h3{
+    padding: 0px;
+    margin: 0px;
+    grid-column: 1 / span 1; /* Starts at column 1 and spans 2 columns */
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  
+    color: rgb(224, 224, 224);}
+  
+
+    .social {
+        font-family: "neue-haas-grotesk-display", sans-serif;
+        font-size: 20px;
+        padding-left: 0px;
+        bottom: 20px; /* 20px from the bottom */
+        right: 20px; /* Initial position 20px from the right */
+        color: rgb(224, 224, 224);  list-style: none; /* Remove default list styling */
+        justify-self: end; /* Align the social list to the right side */
+        margin: 0px;
+        grid-column: 4 / 4;
+        font-weight: 600;
+        padding-top: 25px;
+
+      
+      
+      
+      }
+      
+      .social li {
+        display: inline-block; /* Stack list items horizontally */
+        margin-right: 10px; /* Add some spacing between list items */
+      
+      }
+      
+      .social li:last-child {
+        margin-right: 0; /* Remove margin from the last list item */
+      }
+      
+      .social li a {
+        text-decoration: none; /* Remove underline from links */
+        color: rgb(224, 224, 224);  list-style: none; /* Remove default list styling */
+      }
+      
+      .social li a:hover {
+        color: #4f4f4f;
+      }
+      
+      
+      
+      
+      
+      
+  
+  
+  
+  /* ABOUT*/
+  
+  
+  
+  
+  
+  
+  .storia{
+  grid-column: 1/3;
+  }
+
+
+
+
+
+
+
+
+/*---------------RESPONSIVE----------------*/
+
+
+@media (min-width: 1351px) {
+  .griglia {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px;
+  }
+  
+header{
+  margin:20px;
+  left: 0px;
+}
+   
+  
+  
+  
+.storia{
+ 
+  grid-column: 1/3;
+
+}
+
+
+
+
+}
+
+
+
+@media (max-width: 1350px) and (min-width: 607px) {
+  .griglia {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin:20px;
+    margin-left:20px;
+    right: 20px; /* Adjusted to provide space from right */
+
+  }
+  .griglia {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  
+  .storia{
+ 
+    grid-column: 1/2;
+  
+  }
+  
+  
+
+
+}
+
+
+
+@media (max-width: 606px) {
+
+  
+  .griglia {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+
+  header {
+    
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90.7%;  
+    font-size: 16px;
+    margin:20px;
+    margin-left:20px;
+    right: 20px; /* Adjusted to provide space from right */
+
+  }
+
+
+
+.descriz{
+  font-size: 16px;
+  font-weight: 600;
+
+  
+}
+
+.descrizione-card {
+  font-size: 16px;
+ 
+  
+}
+/*footer*/
+h3{
+ 
+  font-size: 16px;
+  grid-column: 1/ span 3;
+}
+
+.social {
+  font-size: 16px;
+
+  padding-left: 0px;
+  padding-top: 0px;
+}
+.footer{
+  width: 93%;
+}
+
+.portfolio {
+  font-size: 16px;
+}
+.mail{
+  
+  font-size: 16px;
+}
+p.storia {
+  font-size: 16px;
+}
+
+
+}
+
